@@ -27,8 +27,8 @@ MyEspUsbHost usbHost;
 void setup() {
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);
-  // Explicitly attach hardware UART0 to D6 (TX, GPIO6), D7 (RX, GPIO7)
-  mySerial.begin(115200, SERIAL_8N1, 44, 43);  // RX=7, TX=6 for XIAO
+  // Explicitly attach hardware UART0 to D6 (TX, GPIO43), D7 (RX, GPIO44)
+  mySerial.begin(115200, SERIAL_8N1, 44, 43);  // RX=D7, TX=D6 for XIAO
   // If your FTDI RX is connected to D6(G6), this is correct.
   delay(500);
   usbHost.begin();
